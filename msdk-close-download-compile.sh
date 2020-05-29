@@ -12,6 +12,9 @@ git clone ssh://$idsid@git-ccr-1.devtools.intel.com:29418/mdp_msdk-lib
 echo 'Downloading mdp_msdk-contrib project'
 echo 'git clone ssh://'$idsid'@git-ccr-1.devtools.intel.com:29418/mdp_msdk-contrib'
 git clone ssh://$idsid@git-ccr-1.devtools.intel.com:29418/mdp_msdk-contrib
+echo 'Downloading mdp_msdk-val-tools project'
+echo 'git clone ssh://$idsid@git-ccr-1.devtools.intel.com:29418/mdp_msdk-val-tools'
+git clone ssh://$idsid@git-ccr-1.devtools.intel.com:29418/mdp_msdk-val-tools
 echo 'Downloading code base complete sucessfully'
 sleep 2
 echo
@@ -56,5 +59,8 @@ make -C __cmake/intel64.make.release -j 16 mfx_player
 echo
 echo 'compiling mfxhw64'
 make -C __cmake/intel64.make.release -j 16 mfxhw64
+echo
+echo 'compiling msdk_gmock'
+make -C __cmake/intel64.make.release -j 16 msdk_gmock
+make -C __cmake/intel64.make.debug -j 16 msdk_gmock
 echo 'Compilation successful, you can find bin generated in ./__cmake/intel64.make.release/__bin/release/'
-

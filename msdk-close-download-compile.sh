@@ -36,9 +36,11 @@ echo
 # #Secition to start code compiling
 mv 0001-fix-for-build-on-ubuntu.patch mdp_msdk-lib
 cd mdp_msdk-lib
-git am 0001-fix-for-build-on-ubuntu.patch
-cd ..
+git am ../0001-fix-for-build-on-ubuntu.patch
+cd $MEDIASDK_ROOT
+
 echo 'Setting environment vaiables needed'
+export MAKE_TYPE=intel64.make.debug
 export MEDIASDK_ROOT=`pwd`
 export MFX_HOME=$MEDIASDK_ROOT
 export MFX_MDF_PATH=$MEDIASDK_ROOT/cmrt_linux
@@ -48,27 +50,15 @@ export CMAKE_VTUNE_HOME=$MEDIASDK_ROOT/mdp_msdk-contrib/itt
 #export PKG_CONFIG_TOP_BUILD_DIR=$PKG_CONFIG_PATH
 export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$LIBVA_ROOT
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:$LIBVA_ROOT
-#cp mdp_msdk-lib/builder/CMakeLists.txt ./
 ln -s mdp_msdk-lib/builder/CMakeLists.txt ./
 
 # perl mdp_msdk-lib/builder/build_mfx.pl --cmake=intel64.make.release --no-warn-as-error
 perl mdp_msdk-lib/builder/build_mfx.pl --cmake=intel64.make.debug --no-warn-as-error --api=latest
-# cmake --no-warn-unused-cli -Wno-dev -G "Unix Makefiles" -D__GENERATOR:STRING=make -DAPI:STRING=latest -DCMAKE_CONFIGURATION_TYPES:STRING="release;debug" \
-#     -DCMAKE_BUILD_TYPE:STRING=debug -D__IPP:STRING=e9 -D__TARGET_PLATFORM:STRING=ATS -DCMAKE_C_FLAGS_DEBUG=" -O0 -g" -DCMAKE_CXX_FLAGS_DEBUG=" -O0 -g" \
-#     -DMFX_HW_KMB=ON -DMFX_ENABLE_VC1_VIDEO_DECODE=OFF /home/test/msdk 
 
 echo
-# echo 'Compiling mfx_transcoder'
-# make -C __cmake/intel64.make.release -j 16 mfx_transcoder
-echo
-# echo 'compiling mfx_player'
-# make -C __cmake/intel64.make.release -j 16 mfx_player
-make -C __cmake/intel64.make.debug -j 16 mfx_player
-echo
-# echo 'compiling mfxhw64'
-# make -C __cmake/intel64.make.release -j 16 mfxhw64
-# make -C __cmake/intel64.make.debug -j 16 mfxhw64
+echo 'Compiling mfx_transcoder and player'
+make -C __cmake/$MAKE_TYPE -j 16 mfx_transcoder mfx_player
 
 echo 'compiling msdk_gmock'
-# make -C __cmake/intel64.make.debug -j 16 msdk_gmock
+make -C __cmake/$MAKE_TYPE -j 16 msdk_gmock
 echo 'Compilation successful, you can find bin generated in ./__cmake/intel64.make.release/__bin/release/'

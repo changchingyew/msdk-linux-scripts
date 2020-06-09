@@ -33,12 +33,6 @@ else
 fi
 echo
 
-# #Secition to start code compiling
-mv 0001-fix-for-build-on-ubuntu.patch mdp_msdk-lib
-cd mdp_msdk-lib
-git am ../0001-fix-for-build-on-ubuntu.patch
-cd $MEDIASDK_ROOT
-
 echo 'Setting environment vaiables needed'
 export MAKE_TYPE=intel64.make.debug
 export MEDIASDK_ROOT=`pwd`
@@ -52,6 +46,11 @@ export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$LIBVA_ROOT
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:$LIBVA_ROOT
 ln -s mdp_msdk-lib/builder/CMakeLists.txt ./
 
+#Secition to start code compiling
+cd mdp_msdk-lib
+git am ../*.patch
+
+cd $MEDIASDK_ROOT
 # perl mdp_msdk-lib/builder/build_mfx.pl --cmake=intel64.make.release --no-warn-as-error
 perl mdp_msdk-lib/builder/build_mfx.pl --cmake=intel64.make.debug --no-warn-as-error --api=latest
 

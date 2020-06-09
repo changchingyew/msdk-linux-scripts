@@ -1,0 +1,39 @@
+From b99b61dd13427704ddf39e964a961ab9d62dcd0d Mon Sep 17 00:00:00 2001
+From: "Yew, Chang Ching" <chang.ching.yew@intel.com>
+Date: Fri, 29 May 2020 16:56:08 +0800
+Subject: [PATCH 2/3] fix 2 for ubuntu build
+
+Signed-off-by: Yew, Chang Ching <chang.ching.yew@intel.com>
+---
+ builder/build_mfx.pl          | 2 ++
+ builder/open_source_files.txt | 1 -
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/builder/build_mfx.pl b/builder/build_mfx.pl
+index 53faad099..c95e7436b 100755
+--- a/builder/build_mfx.pl
++++ b/builder/build_mfx.pl
+@@ -159,6 +159,8 @@ sub get_cmake_gen_cmd {
+         push @cmake_cmd_gen, "-DCMAKE_CXX_FLAGS_DEBUG=\"$compile_flags\"";
+     }
+ 
++    push @cmake_cmd_gen, "-DMFX_HW_KMB=ON -DMFX_ENABLE_VC1_VIDEO_DECODE=OFF";
++
+     # This is the main different between "make" and "eclipse"" generators.
+     # In case of "Eclipse" out-of-source build you have to point cmake
+     # (1): on the current $MFX_HOME (source folder with main CMakeLists.txt)
+diff --git a/builder/open_source_files.txt b/builder/open_source_files.txt
+index 510e97b71..fb474a7a9 100644
+--- a/builder/open_source_files.txt
++++ b/builder/open_source_files.txt
+@@ -882,7 +882,6 @@ samples/sample_common/src/vaapi_utils_android.cpp
+ samples/sample_common/src/vaapi_utils_drm.cpp
+ samples/sample_common/src/vaapi_utils_x11.cpp
+ samples/sample_common/src/vm/atomic.cpp
+-samples/sample_common/src/vm/atomic_linux.cpp
+ samples/sample_common/src/vm/shared_object.cpp
+ samples/sample_common/src/vm/shared_object_linux.cpp
+ samples/sample_common/src/vm/thread_linux.cpp
+-- 
+2.17.1
+

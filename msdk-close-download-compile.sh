@@ -59,5 +59,5 @@ echo 'Compiling mfx_transcoder and player'
 make -C __cmake/$MAKE_TYPE -j 16 mfx_transcoder mfx_player
 
 echo 'compiling msdk_gmock'
-make -C __cmake/$MAKE_TYPE -j 16 msdk_gmock
+make VERBOSE=1 -C __cmake/$MAKE_TYPE -j $(nproc) msdk_ts msdk_gmock
 echo 'Compilation successful, you can find bin generated in ./__cmake/intel64.make.release/__bin/release/'

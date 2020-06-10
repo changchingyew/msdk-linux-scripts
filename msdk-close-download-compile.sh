@@ -4,7 +4,7 @@ set -x
 ipp_dir="ipp"
 cmrt_dir="cmrt_linux"
 
-# #Section to download source code
+ #Section to download source code
 echo 'This script will compile mfx_transcoder, mfx_player, mfxhw64'
 echo 'Enter your idsid to start with. e.g vsodhi'
 read idsid
@@ -20,7 +20,7 @@ echo 'Downloading code base complete sucessfully'
 sleep 2
 echo
 
-# #Section to check for prerequisite
+#Section to check for prerequisite
 tar -xvf cmrt-ipp-deps-of-msdk.tar.gz
 echo 'checking for dependencies needed'
 if [ -d "$ipp_dir" ] && [ -d "$cmrt_dir" ] && [ -f "0001-fix-for-build-on-ubuntu.patch" ] ; then

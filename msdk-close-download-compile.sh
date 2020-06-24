@@ -54,9 +54,9 @@ cd $MEDIASDK_ROOT
 # perl mdp_msdk-lib/builder/build_mfx.pl --cmake=intel64.make.release --no-warn-as-error
 perl mdp_msdk-lib/builder/build_mfx.pl --cmake=intel64.make.debug --no-warn-as-error --api=latest
 
-echo
-echo 'Compiling mfx_transcoder and player'
-make -C __cmake/$MAKE_TYPE -j 16 mfx_transcoder mfx_player
+# echo
+# echo 'Compiling mfx_transcoder and player'
+# make -C __cmake/$MAKE_TYPE -j 16 mfx_transcoder mfx_player
 
 echo 'compiling msdk_gmock'
 make VERBOSE=1 -C __cmake/$MAKE_TYPE -j $(nproc) msdk_ts msdk_gmock

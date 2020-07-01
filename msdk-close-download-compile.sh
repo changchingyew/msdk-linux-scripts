@@ -47,12 +47,11 @@ export C_INCLUDE_PATH=$C_INCLUDE_PATH:$LIBVA_ROOT
 ln -s mdp_msdk-lib/builder/CMakeLists.txt ./
 
 #Secition to start code compiling
-cd mdp_msdk-lib
-git am ../*.patch
+# cd mdp_msdk-lib
+# git am ../*.patch
 
 cd $MEDIASDK_ROOT
-# perl mdp_msdk-lib/builder/build_mfx.pl --cmake=intel64.make.release --no-warn-as-error
-perl mdp_msdk-lib/builder/build_mfx.pl --cmake=intel64.make.debug --no-warn-as-error --api=latest
+perl mdp_msdk-lib/builder/build_mfx.pl --cmake=intel64.make.debug --no-warn-as-error
 
 # echo
 # echo 'Compiling mfx_transcoder and player'

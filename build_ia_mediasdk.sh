@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #set -x
-if [ "$1" == "no_hddl" ]; then
+if [ "$2" == "no_hddl" ]; then
 	export CMAKE_OPT=
 else
 	export CMAKE_OPT=-DMFX_VSI_HDDL=ON
@@ -19,5 +19,5 @@ elif [ "$1" == "vsi" ]; then
 	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_VSI=ON $CMAKE_OPT -DAPI=latest
 	make -j$(nproc) mfxhw64 mfx_hevcd_hw64 mfx_hevcd_hw64 mfx_vp9d_hw64 sample_encode sample_decode sample_multi_transcode
 else
-	echo "Usage: $0 kmb/tbh/vsi"
+	echo "Usage: $0 kmb/tbh/vsi [no_hddl]"
 fi

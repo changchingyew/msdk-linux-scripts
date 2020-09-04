@@ -25,4 +25,8 @@ elif [ "$1" == "vsi" ]; then
 	make -j$(nproc) mfxhw64 mfx_hevce_hw64 mfx_hevcd_hw64 mfx_vp9d_hw64 sample_encode sample_decode sample_multi_transcode
 else
 	echo "Usage: $0 kmb/tbh/vsi [no_hddl]"
+	echo -e "\tkmb for closed source kmb target"
+	echo -e "\ttbh for closed source tbh target"
+	echo -e "\tvsi for open source kmb/tbh target"
+	echo -e "\tno_hddl to disable HDDL unite build option"
 fi

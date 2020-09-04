@@ -4,6 +4,11 @@
 if [ "$2" == "no_hddl" ]; then
 	export CMAKE_OPT=
 else
+	export HOST_INSTALL_DIR=/opt/intel/
+	export KMB_INSTALL_DIR=${HOST_INSTALL_DIR}/hddlunite
+	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${KMB_INSTALL_DIR}/lib
+	export PATH=$PATH:${KMB_INSTALL_DIR}/bin
+
 	export CMAKE_OPT=-DMFX_VSI_HDDL=ON
 fi
 

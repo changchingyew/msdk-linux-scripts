@@ -25,9 +25,7 @@ mv libmfx_hevc* libmfx_vp9d_hw64.so $MFX_HOME/lib64/mfx
 mv sample_* $MFX_HOME/share/mfx/samples/_bin
 mv ../../plugins.cfg $MFX_HOME/share/mfx/ 
 mv libmfx.pc $MFX_HOME/lib64/pkgconfig/
-cp install_media.sh $CUR_HOME
-
 
 MFX_PKG_FILES="install_media.sh opt"
 tar jvcf MediaStack.tbz $MFX_PKG_FILES
-sudo rm -rf $MFX_PKG_FILES
+rm -rf $MFX_PKG_FILES

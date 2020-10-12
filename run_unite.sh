@@ -2,7 +2,7 @@
 
 source $PWD/run_env.sh
 
-export CONFIG_PATH=$PWD/connection_xlink.cfg
+export CONFIG_PATH=$PWD/connection_unite.cfg
 
 if [ "$1" == "kmb" ]; then
 	export _LAST_SLICE=0

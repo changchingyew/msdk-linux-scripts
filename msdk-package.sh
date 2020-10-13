@@ -21,7 +21,6 @@ ln -s ../../share/mfx/plugins.cfg .
 
 cd $CUR_HOME
 mv libmfxhw64.so* libmfx.so* $MFX_HOME/lib64/
-mv libmfx_hevc* libmfx_vp9d_hw64.so $MFX_HOME/lib64/mfx
 mv sample_* simple_* $MFX_HOME/share/mfx/samples/_bin
 mv ../../plugins.cfg $MFX_HOME/share/mfx/ 
 mv libmfx.pc $MFX_HOME/lib64/pkgconfig/

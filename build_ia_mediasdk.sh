@@ -1,8 +1,9 @@
 #!/bin/bash
 
 #set -x
+
 if [ "$2" == "no_hddl" ]; then
-	export CMAKE_OPT=
+	unset CMAKE_OPT
 elif [ "$2" == "no_onevpl" ]; then
 	export HOST_INSTALL_DIR=/opt/intel/
 	export KMB_INSTALL_DIR=${HOST_INSTALL_DIR}/hddlunite
@@ -16,7 +17,7 @@ else
 	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${KMB_INSTALL_DIR}/lib
 	export PATH=$PATH:${KMB_INSTALL_DIR}/bin
 
-	export CMAKE_OPT=-DMFX_VSI_HDDL=ON -DMFX_ONEVPL=ON
+	export CMAKE_OPT="-DMFX_VSI_HDDL=ON -DMFX_ONEVPL=ON"
 fi
 
 if [ "$1" == "kmb" ]; then
@@ -36,8 +37,8 @@ elif [ "$1" == "tbh" ]; then
 	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_THB=ON $CMAKE_OPT -DAPI=latest
 	make -j$(nproc) sample_encode sample_decode sample_multi_transcode
 elif [ "$1" == "vsi" ]; then
-	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_VSI=ON $CMAKE_OPT -DAPI=latest -DENABLE_TEXTLOG=ON
-	make -j$(nproc) mfxhw64 mfx_hevce_hw64 mfx_hevcd_hw64 mfx_vp9d_hw64 sample_encode sample_decode sample_multi_transcode simple_decode_hddl  simple_transcode_hddl
+	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_VSI=ON $CMAKE_OPT -DAPI=latest
+	make -j$(nproc) mfxhw64 sample_encode sample_decode sample_multi_transcode simple_decode_hddl simple_transcode_hddl
 else
 	echo "Usage: $0 kmb/tbh/vsi [no_hddl/no_onevpl]"
 	echo -e "\tkmb for closed source kmb target"

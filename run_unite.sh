@@ -17,3 +17,5 @@ for i in `seq 0 $_LAST_SLICE`;
 do
 	hddl_device_service $i &
 done
+
+/home/root/vaapi_bypass/build_kmb/hddl_bypass_shim unite

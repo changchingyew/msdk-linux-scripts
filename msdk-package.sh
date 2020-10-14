@@ -20,11 +20,16 @@ cd $MFX_HOME/lib64/mfx
 ln -s ../../share/mfx/plugins.cfg .
 
 cd $CUR_HOME
-mv libmfxhw64.so* libmfx.so* $MFX_HOME/lib64/
+mv libmfxhw64.so* $MFX_HOME/lib64/
+mv ../../oneVPL/dispatcher/libmfx.so* $MFX_HOME/lib64/
 mv sample_* simple_* $MFX_HOME/share/mfx/samples/_bin
 mv ../../plugins.cfg $MFX_HOME/share/mfx/ 
 mv libmfx.pc $MFX_HOME/lib64/pkgconfig/
 
+cd $MFX_HOME/lib64/
+ln -s libmfx.so.2 libmfx.so.1
+
+cd $CUR_HOME
 MFX_PKG_FILES="install_media.sh opt"
 tar jvcf MediaStack.tbz $MFX_PKG_FILES
 

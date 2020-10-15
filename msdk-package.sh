@@ -28,6 +28,7 @@ mv libmfx.pc $MFX_HOME/lib64/pkgconfig/
 
 cd $MFX_HOME/lib64/
 ln -s libmfx.so.2 libmfx.so.1
+ln -s libmfxhw64.so.2 libmfxhw64.so.1
 
 cd $CUR_HOME
 MFX_PKG_FILES="install_media.sh opt"

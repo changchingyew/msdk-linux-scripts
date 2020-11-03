@@ -21,7 +21,7 @@ ln -s ../../share/mfx/plugins.cfg .
 
 cd $CUR_HOME
 mv libmfxhw64.so* $MFX_HOME/lib64/
-mv ../../oneVPL/dispatcher/libmfx.so* $MFX_HOME/lib64/
+mv libmfx.so* $MFX_HOME/lib64/
 mv sample_* simple_* $MFX_HOME/share/mfx/samples/_bin
 mv ../../plugins.cfg $MFX_HOME/share/mfx/ 
 mv libmfx.pc $MFX_HOME/lib64/pkgconfig/

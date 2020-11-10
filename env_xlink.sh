@@ -1,5 +1,6 @@
 #!/bin/bash
+DIR=$(dirname $(readlink -f "${BASH_SOURCE[0]}" 2>/dev/null||echo $0))
 
-source $PWD/env.sh
+source $DIR/env.sh
 
-export CONFIG_PATH=$PWD/connection_xlink.cfg
+export CONFIG_PATH=$DIR/connection_xlink.cfg

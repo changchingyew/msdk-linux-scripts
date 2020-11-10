@@ -21,7 +21,7 @@ ln -s ../../share/mfx/plugins.cfg .
 
 cd $CUR_HOME/../../../..
 cp install_media.sh $CUR_HOME
-cp env.sh env_xlink.sh connection_xlink.cfg $MFX_HOME
+cp env.sh env_xlink.sh env_hddl.sh connection_xlink.cfg connection_hddl.cfg $MFX_HOME
 
 cd $CUR_HOME
 mv libmfxhw64.so* $MFX_HOME/lib64/

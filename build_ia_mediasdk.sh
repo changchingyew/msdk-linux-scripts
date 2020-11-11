@@ -10,7 +10,7 @@ elif [ "$2" == "no_onevpl" ]; then
 	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${KMB_INSTALL_DIR}/lib
 	export PATH=$PATH:${KMB_INSTALL_DIR}/bin
 
-	export CMAKE_OPT=-DMFX_VSI_HDDL=ON
+	export CMAKE_OPT="-DMFX_VSI_HDDL=ON -DMFX_ONEVPL=OFF"
 else
 	export HOST_INSTALL_DIR=/opt/intel/
 	export KMB_INSTALL_DIR=${HOST_INSTALL_DIR}/hddlunite

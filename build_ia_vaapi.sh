@@ -1,9 +1,9 @@
 #!/bin/bash
 set -x
 export SAFESTR_HOME=$PWD/../../safestringlib
-export CMAKE_PREFIX_PATH=$PWD/../../xlink/
 export HDDLUNITE=1
-#_CMAKE_OPTS=-DDEBUG=ON
+_CMAKE_OPTS=-DSECURE_XLINK=ON
+#_CMAKE_OPTS="-DDEBUG=ON "$_CMAKE_OPTS
 
 echo "Running $0 $1"
 if [ "$1" == "kmb" ]; then

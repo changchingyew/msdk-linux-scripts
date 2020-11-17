@@ -36,7 +36,8 @@ ln -s libmfxhw64.so.2 libmfxhw64.so.1
 
 cd $CUR_HOME
 MFX_PKG_FILES="install_media.sh opt"
-tar jvcf MediaStack.tbz $MFX_PKG_FILES
+COMMIT_ID=$(git rev-parse --short HEAD)
+tar jvcf MediaStack_${COMMIT_ID}.tbz $MFX_PKG_FILES
 
 if [ "$1" != "no_clean" ]; then
 	rm -rf $MFX_PKG_FILES

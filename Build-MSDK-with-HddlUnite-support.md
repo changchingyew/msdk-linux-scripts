@@ -1,0 +1,7 @@
+- Download hddlunite prebuilt from https://wiki.ith.intel.com/display/ITSKMBHTT/KeemBay+Use+Case+Tiger+Team+Home for example hddlunite-host_0.1.1-b560d31c.tar.gz from https://wiki.ith.intel.com/display/ITSKMBHTT/HddlUnite+release+WW34%272020
+- Untar hddlunite-host_0.1.1-b560d31c.tar.gz and move hddlunite directory to /opt/intel/hddlunite
+    - tar zxf hddlunite-host_0.1.1-b560d31c.tar.gz && sudo mv hddlunite /opt/intel/
+- Check out msdk-linux-scripts
+    - git clone ssh://git@gitlab.devtools.intel.com:29418/OWR/IoTG/GMS/Yocto/Graphics/Media/msdk-linux-scripts.git && cd msdk-linux-scripts
+- Checkout MediaSDK, create build directory and built
+    - git clone ssh://git@gitlab.devtools.intel.com:29418/OWR/IoTG/GMS/Yocto/Graphics/Media/MediaSDK.git && mkdir -p MediaSDK/build && cd MediaSDK/build && ./../build_ia_mediasdk.sh vsi

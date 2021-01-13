@@ -8,9 +8,7 @@ export MFX_PLUGINS_CONF_DIR=$MFX_HOME/plugins
 mkdir -p $MFX_HOME/lib64/mfx
 mkdir -p $MFX_HOME/lib64/pkgconfig
 mkdir -p $MFX_HOME/share/mfx/samples/_bin
-mkdir -p $MFX_HOME/bin
 mkdir -p $MFX_HOME/doc
-mkdir -p $MFX_HOME/include
 
 cd $MFX_HOME
 ln -s lib64 lib

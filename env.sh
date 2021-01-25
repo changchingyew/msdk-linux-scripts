@@ -12,7 +12,7 @@ export KMB_INSTALL_DIR=${HOST_INSTALL_DIR}/hddlunite
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${KMB_INSTALL_DIR}/lib
 export PATH=$PATH:${KMB_INSTALL_DIR}/bin
 
-export MFX_HOME=/opt/intel/mediasdk
+export MFX_HOME=/opt/intel/onevpl
 
 export PATH=$MFX_HOME/bin:$MFX_HOME/share/mfx/samples/_bin:$PATH
 export LD_LIBRARY_PATH=$MFX_HOME/lib64:$MFX_HOME/lib64/mfx:$LD_LIBRARY_PATH

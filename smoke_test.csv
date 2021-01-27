@@ -1,0 +1,88 @@
+LINUX_MSDK_AVC-FEncode_Functional_Paramter_Setting-M-0008,./test_driver.pl -s beh_avce_aud -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_AVC-FEncode_Profiling-M-0021,./test_driver.pl -s beh_avce_co2_disable_deblocking -p u18.04_tbh_64 --gold no -i 4
+LINUX_MSDK_AVC-FEncode_Profiling-M-0011,./test_driver.pl -s beh_avce_entropy_mode -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_AVC-FEncode_Pixel_Format-M-0005,./test_driver.pl -s beh_avce_fourcc -p u18.04_tbh_64 --gold no -i 3
+LINUX_MSDK_AVC-FEncode_Pixel_Format-M-0011,./test_driver.pl -s beh_avce_mono_stream -p u18.04_tbh_64 --gold no -i 2
+LINUX_MSDK_AVC-FEncode_Profiling-M-0059,./test_driver.pl -s beh_avce_nummbperslice -p u18.04_tbh_64 --gold no -i 13
+LINUX_MSDK_AVC-FEncode_Functional_Paramter_Setting-M-0061,./test_driver.pl -s beh_avce_resend_sps_pps -p u18.04_tbh_64 --gold no -i 2
+LINUX_MSDK_AVC-FEncode_Dynamic-M-0013,./test_driver.pl -s beh_avce_reset -p u18.04_tbh_64 --gold no -i 19
+LINUX_MSDK_AVC-FEncode_Dynamic-M-0007,./test_driver.pl -s beh_avce_vsi_frame_rate -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_AVC-FEncode_Profiling-M-0069,./test_driver.pl -s beh_avce_vsi_ipcm -p u18.04_tbh_64 --gold no -i 4
+LINUX_MSDK_AVC-FEncode_Functional_Paramter_Setting-M-0049,./test_driver.pl -s beh_avce_vsi_ipcm_roimap -p u18.04_tbh_64 --gold no -i 3
+LINUX_MSDK_AVC-FEncode_Bitrate-M-0007,./test_driver.pl -s beh_avce_vsi_rc_switch -p u18.04_tbh_64 --gold no 
+LINUX_MSDK_AVC-FEncode_ROI-M-0041,./test_driver.pl -s beh_avce_vsi_roi -p u18.04_tbh_64 --gold no -i 5
+LINUX_MSDK_AVC-FEncode_HRD-M-0011,./test_driver.pl -s beh_avce_vsi_vui_hrd -p u18.04_tbh_64 --gold no -i 5
+LINUX_MSDK_HEVC-FEncode_BEH-M-0041,./test_driver.pl -s beh_hevce_8b_420_nv12_multislice -p u18.04_tbh_64 --gold no -i 41
+LINUX_MSDK_HEVC-FEncode_Functional_Parameter_Setting-M-0091,./test_driver.pl -s beh_hevce_aud -p u18.04_tbh_64 --gold no -i 2
+LINUX_MSDK_HEVC-FEncode_Functional_Parameter_Setting-M-0014,./test_driver.pl -s beh_hevce_co2_disable_deblocking -p u18.04_tbh_64 --gold no -i 21
+LINUX_MSDK_HEVC-FEncode_Pixel_Format-M-0005,./test_driver.pl -s beh_hevce_fourcc -p u18.04_tbh_64 --gold no -i 3
+LINUX_MSDK_HEVC-FEncode_Pixel_Format-M-0010,./test_driver.pl -s beh_hevce_mono_stream -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FEncode_Functional_Parameter_Setting-M-0092,./test_driver.pl -s beh_hevce_resend_sps_pps -p u18.04_tbh_64 --gold no -i 2
+LINUX_MSDK_HEVC-FEncode_Dynamic-M-0007,./test_driver.pl -s beh_hevce_vsi_frame_rate -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FEncode_Profiling-M-0054,./test_driver.pl -s beh_hevce_vsi_ipcm -p u18.04_tbh_64 --gold no -i 3
+LINUX_MSDK_HEVC-FEncode_Functional_Parameter_Setting-M-0081,./test_driver.pl -s beh_hevce_vsi_ipcm_roimap -p u18.04_tbh_64 --gold no -i 18
+LINUX_MSDK_HEVC-FEncode_Bitrate-M-0007,./test_driver.pl -s beh_hevce_vsi_rc_switch -p u18.04_tbh_64 --gold no
+LINUX_MSDK_HEVC-FEncode_ROI-M-0045,./test_driver.pl -s beh_hevce_vsi_roi -p u18.04_tbh_64 --gold no -i 9
+LINUX_MSDK_JPEG-FEncode_Pixel_Format-M-0009,./test_driver.pl -s beh_mjpege_fourcc -p u18.04_tbh_64 --gold no -i 5
+LINUX_MSDK_JPEG-FEncode_Pixel_Format-M-0010,./test_driver.pl -s beh_mjpege_mono_stream -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_JPEG-FEncode_Profiling-M-0014,./test_driver.pl -s beh_mjpege_tables -p u18.04_tbh_64 --gold no -i 9
+LINUX_MSDK_JPEG-FEncode_Crop-M-0006,./test_driver.pl -s beh_mjpege_vsi_crop_roi -p u18.04_tbh_64 --gold no -i 4
+LINUX_MSDK_JPEG-FEncode_Concurrent-M-0006,./test_driver.pl -s beh_mjpege_vsi_multi_stream_tables -p u18.04_tbh_64 --gold no 
+LINUX_MSDK_AVC-FDecode_Resolution-M-0015,./test_driver.pl -s h264d_tbh_resolutions -p u18.04_tbh_64 --gold no -i 3
+LINUX_MSDK_AVC-FEncode_ROI-M-0009,./test_driver.pl -s h264d_to_h264e_vsi_perf_roi -p u18.04_tbh_64 --gold no 
+LINUX_MSDK_HEVC-FEncode_ROI-M-0005,./test_driver.pl -s h264d_to_hevce_hevce_vsi_roi -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_JPEG-FEncode_Concurrent-M-0002,./test_driver.pl -s h264d_to_hevce_jpege_vsi -p u18.04_tbh_64 --gold no
+LINUX_MSDK_JPEG-FEncode_Concurrent-M-0003,./test_driver.pl -s h264d_to_mjpege -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_AVC-FDecode_Profiling-M-0005,./test_driver.pl -s h264d_vsi_profiles -p u18.04_tbh_64 --gold no -i 4
+LINUX_MSDK_AVC-FDecode_Resolution-M-0009,./test_driver.pl -s h264d_vsi_resolutions -p u18.04_tbh_64 --gold no -i 8
+LINUX_MSDK_AVC-FEncode_Profiling-M-0015,./test_driver.pl -s h264e_goppattern -p u18.04_tbh_64 --gold no -i 136
+LINUX_MSDK_AVC-FEncode_Bitrate-M-0017,./test_driver.pl -s h264e_vsi_bitrate_range -p u18.04_tbh_64 --gold no -i 4
+LINUX_MSDK_AVC-FEncode_Profiling-M-0012,./test_driver.pl -s h264e_vsi_cavlc -p u18.04_tbh_64 --gold no -i 2
+LINUX_MSDK_AVC-FEncode_Dynamic-M-0002,./test_driver.pl -s h264e_vsi_dynamic_idr -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_AVC-FEncode_Dynamic-M-0003,./test_driver.pl -s h264e_vsi_dynamic_idr_brc -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_AVC-FEncode_Dynamic-M-0001,./test_driver.pl -s h264e_vsi_dynamic_idr_gop -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_AVC-FEncode_Dynamic-M-0004,./test_driver.pl -s h264e_vsi_dynamic_idr_roi -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_AVC-FEncode_HRD-M-0001,./test_driver.pl -s h264e_vsi_fps -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_AVC-FEncode_Dynamic-M-0009,./test_driver.pl -s h264e_vsi_fr_latency -p u18.04_tbh_64 --gold no 
+LINUX_MSDK_AVC-FEncode_Low_Delay_Mode-M-0002,./test_driver.pl -s h264e_vsi_latency -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_AVC-FEncode_Bitrate-M-0008,./test_driver.pl -s h264e_vsi_low_bitrate -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_AVC-FEncode_Bitrate-M-0001,./test_driver.pl -s h264e_vsi_output_bitrate -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_AVC-FEncode_Profiling-M-0004,./test_driver.pl -s h264e_vsi_profile -p u18.04_tbh_64 --gold no -i 2
+LINUX_MSDK_AVC-FEncode_Resolution-M-0008,./test_driver.pl -s h264e_vsi_resolutions -p u18.04_tbh_64 --gold no -i 2
+LINUX_MSDK_AVC-FEncode_Bitrate-M-0012,./test_driver.pl -s h264e_vsi_vbr -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FDecode_Resolution-M-0013,./test_driver.pl -s hevcd_tbh_resolutions -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FEncode_ROI-M-0009,./test_driver.pl -s hevcd_to_hevce_vsi_perf_roi -p u18.04_tbh_64 --gold no 
+LINUX_MSDK_JPEG-FEncode_Concurrent-M-0004,./test_driver.pl -s hevcd_to_mjpege-plugin_hevcdhw -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FDecode_Profiling-M-0003,./test_driver.pl -s hevcd_vsi_profiles -p u18.04_tbh_64 --gold no -i 2
+LINUX_MSDK_HEVC-FDecode_Resolution-M-0009,./test_driver.pl -s hevcd_vsi_resolutions -p u18.04_tbh_64 --gold no -i 8
+LINUX_MSDK_HEVC-FEncode_Profiling-M-0006,./test_driver.pl -s hevce_goppattern_light-plugin_hevcehw -p u18.04_tbh_64 --gold no -i 85
+LINUX_MSDK_HEVC-FEncode_Bitrate-M-0018,./test_driver.pl -s hevce_vsi_bitrate_range -p u18.04_tbh_64 --gold no -i 5
+LINUX_MSDK_HEVC-FEncode_Bitrate-M-0003,./test_driver.pl -s hevce_vsi_cbr_vbr -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FEncode_Dynamic-M-0004,./test_driver.pl -s hevce_vsi_dynamic_idr -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FEncode_Dynamic-M-0001,./test_driver.pl -s hevce_vsi_dynamic_idr_brc -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FEncode_Dynamic-M-0003,./test_driver.pl -s hevce_vsi_dynamic_idr_gop -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FEncode_Dynamic-M-0002,./test_driver.pl -s hevce_vsi_dynamic_idr_roi -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FEncode_Dynamic-M-0009,./test_driver.pl -s hevce_vsi_fr_latency -p u18.04_tbh_64 --gold no 
+LINUX_MSDK_HEVC-FEncode_Low_Delay_Mode-M-0002,./test_driver.pl -s hevce_vsi_latency -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FEncode_Bitrate-M-0008,./test_driver.pl -s hevce_vsi_low_bitrate -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FEncode_Bitrate-M-0001,./test_driver.pl -s hevce_vsi_output_bitrate -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FEncode_Profiling-M-0005,./test_driver.pl -s hevce_vsi_profile -p u18.04_tbh_64 --gold no -i 1
+LINUX_MSDK_HEVC-FEncode_Resolution-M-0001,./test_driver.pl -s hevce_vsi_resolutions -p u18.04_tbh_64 --gold no -i 9
+LINUX_MSDK_HEVC-FEncode_Bitrate-M-0024,./test_driver.pl -s hevce_vsi_vbr -p u18.04_tbh_64 --gold no -i 2
+LINUX_MSDK_JPEG-FDecode_Resolution-M-0015,./test_driver.pl -s jpegd_vsi_fps -p u18.04_tbh_64 --gold no -i 2
+LINUX_MSDK_JPEG-FDecode_Pixel_Format-M-0002,./test_driver.pl -s mjpegd_conf -p u18.04_tbh_64 --with sys --gold no -i 5
+LINUX_MSDK_JPEG-FDecode_Pixel_Format-M-0053,./test_driver.pl -s mjpegd_conf --with sync -p u18.04_tbh_64 --gold no -i 149
+LINUX_MSDK_JPEG-FDecode_Resolution-M-0007,./test_driver.pl -s mjpegd_vsi_resolutions -p u18.04_tbh_64 --gold no -i 3
+LINUX_MSDK_JPEG-FEncode_Profiling-M-0002,./test_driver.pl -s mjpege_func -p u18.04_tbh_64 --with sys --gold no -i 11
+LINUX_MSDK_JPEG-FEncode_Resolution-M-0010,./test_driver.pl -s mjpege_vsi_resolutions -p u18.04_tbh_64 --gold no -i 4
+LINUX_MSDK_MPEG2-FDecode_Pixel_Format-M-0003,./test_driver.pl -s mpeg2d_vsi_profiles -p u18.04_tbh_64 --gold no -i 3
+LINUX_MSDK_MPEG2-FDecode_Resolution-M-0006,./test_driver.pl -s mpeg2d_vsi_resolutions -p u18.04_tbh_64 --gold no -i 6
+LINUX_MSDK_AVC-FDecode_Profiling-M-0009,./test_driver.pl -s sample_decode_h264d_multislice_subdevice -p u18.04_tbh_64 --gold no -i 4
+LINUX_MSDK_HEVC-FDecode_Profiling-M-0008,./test_driver.pl -s sample_decode_hevcd_multislice_subdevice -p u18.04_tbh_64 --gold no -i 4
+LINUX_MSDK_JPEG-FDecode_Profiling-M-0002,./test_driver.pl -s sample_decode_mjpegd_multislice_subdevice -p u18.04_tbh_64 --gold no -i 2
+LINUX_MSDK_AVC-FEncode_Profiling-M-0084,./test_driver.pl -s sample_encode_h264e_multislice_subdevice -p u18.04_tbh_64 --gold no -i 4
+LINUX_MSDK_HEVC-FEncode_Profiling-M-0070,./test_driver.pl -s sample_encode_hevce_multislice_subdevice -p u18.04_tbh_64 --gold no -i 4
+LINUX_MSDK_JPEG-FEncode_Profiling-M-0027,./test_driver.pl -s sample_encode_mjpege_multislice_subdevice -p u18.04_tbh_64 --gold no -i 2
+LINUX_MSDK_AVC-FEncode_Memory_Mgmt-M-0001,./test_driver.pl -s tutorial_5_simple_transcode_hddl -p u18.04_tbh_64 --gold no 
+LINUX_MSDK_VP9-FDecode_Pixel_Format-M-0003,./test_driver.pl -s vp9d_vsi_profiles -p u18.04_tbh_64 --gold no -i 3
+LINUX_MSDK_VP9-FDecode_Resolution-M-0006,./test_driver.pl -s vp9d_vsi_resolutions -p u18.04_tbh_64 --gold no -i 6

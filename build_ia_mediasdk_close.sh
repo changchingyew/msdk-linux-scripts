@@ -29,6 +29,6 @@ cmake .. -DCMAKE_BUILD_TYPE=debug
 #echo 'compiling msdk_gmock'
 echo 'Compiling all the validaitons tools and apps'
 #make VERBOSE=1 -C __cmake/$MAKE_TYPE -j $(nproc) msdk_ts msdk_gmock
-make -j$(nproc)
+make -j$(nproc) -k
 #echo 'Compilation successful, you can find bin generated in ./__cmake/intel64.make.release/__bin/release/'
 echo 'Compilation successful!!'

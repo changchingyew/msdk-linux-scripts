@@ -25,8 +25,8 @@ cd $CUR_HOME
 mv libmfxhw64.so* $MFX_HOME/lib64/
 mv libmfx.so* $MFX_HOME/lib64/
 mv sample_* simple_* $MFX_HOME/share/mfx/samples/_bin
-mv ../../plugins.cfg $MFX_HOME/share/mfx/ 
-mv libmfx.pc $MFX_HOME/lib64/pkgconfig/
+#mv ../../plugins.cfg $MFX_HOME/share/mfx/ 
+#mv libmfx.pc $MFX_HOME/lib64/pkgconfig/
 
 cd $MFX_HOME/lib64/
 ln -s libmfx.so.2 libmfx.so.1

@@ -15,7 +15,7 @@ ln -s lib64 lib
 ln -s lib64/mfx plugins
 
 cd $MFX_HOME/lib64/mfx
-ln -s ../../share/mfx/plugins.cfg .
+#ln -s ../../share/mfx/plugins.cfg .
 
 cd $CUR_HOME/../../../..
 cp install_media.sh $CUR_HOME

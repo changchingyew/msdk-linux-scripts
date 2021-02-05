@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -x
+export HDDLUNITE=1
 export SAFESTR_HOME=../../safestringlib
 
 if [ "$1" == "kmb" ]; then

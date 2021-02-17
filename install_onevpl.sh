@@ -78,7 +78,7 @@ fi
 echo -e $ECHO_PREFIX_INFO "Install on $LINUX_DISTRO ..."
 
 
-MEDIASDK_DIR=opt/intel/mediasdk
+MEDIASDK_DIR=opt/intel/onevpl
 
 if [ ! -d $MEDIASDK_DIR ] && [ ! -d usr/lib64 ]; then
     echo -e $ECHO_PREFIX_ERROR "Cannot find installation content directory!"

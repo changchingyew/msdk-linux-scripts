@@ -9,6 +9,7 @@ mkdir -p $MFX_HOME/lib64/mfx
 mkdir -p $MFX_HOME/lib64/pkgconfig
 mkdir -p $MFX_HOME/share/mfx/samples/_bin
 mkdir -p $MFX_HOME/doc
+mkdir -p $MFX_HOME/include/vpl
 
 cd $MFX_HOME
 ln -s lib64 lib
@@ -20,6 +21,9 @@ cd $MFX_HOME/lib64/mfx
 cd $CUR_HOME/../../../..
 cp install_onevpl.sh $CUR_HOME
 cp env.sh env_xlink.sh env_hddl.sh connection_xlink.cfg connection_hddl.cfg $MFX_HOME
+
+cd $CUR_HOME/../../../../MediaSDK/oneVPL/vpl
+cp * $MFX_HOME/include/vpl
 
 cd $CUR_HOME
 mv libmfxhw64.so* $MFX_HOME/lib64/

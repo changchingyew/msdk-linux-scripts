@@ -11,17 +11,21 @@ elif [ "$2" == "no_onevpl" ]; then
 	export PATH=$PATH:${KMB_INSTALL_DIR}/bin
 
 	export CMAKE_OPT="-DMFX_VSI_HDDL=ON -DMFX_ONEVPL=OFF"
+elif ["$1" == "vsi_kmb" ]; then
+    export HDDL_ROOT=/opt/intel/hddlunite
+    export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${HDDL_ROOT}/lib
+    export PATH=$PATH:${HDDL_ROOT}/bin
 else
-	export HOST_INSTALL_DIR=/opt/intel/
-	export KMB_INSTALL_DIR=${HOST_INSTALL_DIR}/hddlunite
-	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${KMB_INSTALL_DIR}/lib
-	export PATH=$PATH:${KMB_INSTALL_DIR}/bin
-
-	export CMAKE_OPT="-DMFX_VSI_HDDL=ON -DMFX_ONEVPL=ON"
+    export HOST_INSTALL_DIR=/opt/intel/
+    export KMB_INSTALL_DIR=${HOST_INSTALL_DIR}/hddlunite
+    export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${KMB_INSTALL_DIR}/lib
+    export PATH=$PATH:${KMB_INSTALL_DIR}/bin
+    
+    export CMAKE_OPT="-DMFX_VSI_HDDL=ON -DMFX_ONEVPL=ON"
 fi
 
 if [ "$1" == "kmb" ]; then
-	echo "Build MediasSDK for $0"
+	echo "Build MediaSDK for $1"
 	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_KMB=ON $CMAKE_OPT -DAPI=latest
 	make -j$(nproc) mfxhw64 mfx_hevce_hw64 mfx_hevcd_hw64 sample_encode sample_decode sample_multi_transcode
 
@@ -29,7 +33,7 @@ if [ "$1" == "kmb" ]; then
 	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_THB=ON $CMAKE_OPT -DAPI=latest
 	make -j$(nproc) sample_encode sample_decode sample_multi_transcode
 elif [ "$1" == "tbh" ]; then
-	echo "Build MediasSDK for $0"
+	echo "Build MediaSDK for $1"
 	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_THB=ON $CMAKE_OPT -DAPI=latest
 	make -j$(nproc) mfxhw64 mfx_hevce_hw64 mfx_hevcd_hw64 mfx_vp9d_hw64 sample_encode sample_decode sample_multi_transcode
 
@@ -37,13 +41,20 @@ elif [ "$1" == "tbh" ]; then
 	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_THB=ON $CMAKE_OPT -DAPI=latest
 	make -j$(nproc) sample_encode sample_decode sample_multi_transcode
 elif [ "$1" == "vsi" ]; then
+    echo "Build MediaSDK/oneVPL for $1"
 	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_VSI=ON $CMAKE_OPT -DAPI=latest
 	make -j$(nproc) mfxhw64 sample_encode sample_decode sample_multi_transcode simple_decode_hddl simple_transcode_hddl
+elif [ "$1" == "vsi_kmb" ]; then
+    echo "Build MediaSDK for $1"
+    cmake ..
+    make -j$(nproc)
+    
 else
-	echo "Usage: $0 kmb/tbh/vsi [no_hddl/no_onevpl]"
-	echo -e "\tkmb for closed source kmb target"
-	echo -e "\ttbh for closed source tbh target"
-	echo -e "\tvsi for open source kmb/tbh target"
+	echo "Usage: $0 kmb/tbh/vsi/vsi_kmb [no_hddl/no_onevpl]"
+	echo -e "\tkmb for closed source KMB target"
+	echo -e "\ttbh for closed source TBH target"
+	echo -e "\tvsi for open source TBH target"
+	echo -e "\tvsi_kmb for open source KMB target"
 	echo -e "\tno_hddl to disable HDDL unite build option"
 	echo -e "\tno_onevpl to disable oneVPL build option"
 fi

@@ -38,7 +38,7 @@ elif [ "$1" == "tbh" ]; then
 	make -j$(nproc) sample_encode sample_decode sample_multi_transcode
 elif [ "$1" == "vsi" ]; then
 	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_VSI=ON $CMAKE_OPT -DAPI=latest
-	make -j$(nproc) mfxhw64 sample_encode sample_decode sample_multi_transcode simple_decode_hddl simple_transcode_hddl simple_decode_dynamic_pp
+	make -j$(nproc) mfxhw64 sample_encode sample_decode sample_multi_transcode simple_decode_hddl simple_transcode_hddl
 else
 	echo "Usage: $0 kmb/tbh/vsi [no_hddl/no_onevpl]"
 	echo -e "\tkmb for closed source kmb target"

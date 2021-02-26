@@ -37,7 +37,7 @@ ln -s libmfx.so.2 libmfx.so.1
 ln -s libmfxhw64.so.2 libmfxhw64.so.1
 
 cd $CUR_HOME
-MFX_PKG_FILES="install_media.sh opt"
+MFX_PKG_FILES="install_onevpl.sh opt"
 COMMIT_ID=$(git rev-parse --short HEAD)
 tar jvcf onevpl_${COMMIT_ID}.tbz $MFX_PKG_FILES
 

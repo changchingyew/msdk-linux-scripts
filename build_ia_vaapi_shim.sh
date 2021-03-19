@@ -2,7 +2,12 @@
 set -x
 export SAFESTR_HOME=$PWD/../../safestringlib
 export HDDLUNITE=1
-_CMAKE_OPTS=-DSECURE_XLINK=ON
+if [ "$1" == "tbh" ]; then
+    _CMAKE_OPTS=-DSECURE_XLINK=ON
+else
+    _CMAKE_OPTS=
+fi
+
 #_CMAKE_OPTS="-DDEBUG=ON "$_CMAKE_OPTS
 
 echo "Running $0 $1"

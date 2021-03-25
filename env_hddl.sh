@@ -5,4 +5,7 @@ source $DIR/env.sh
 
 export CONFIG_PATH=$DIR/connection_hddl.cfg
 
-sudo hddl_scheduler_service &
+sudo /opt/intel/hddlunite/bin/hddl_scheduler_service &
+
+sleep 3
+/opt/intel/hddlunite/bin/SetHDDLMode -m b

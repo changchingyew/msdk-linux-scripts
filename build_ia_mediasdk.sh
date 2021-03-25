@@ -32,14 +32,6 @@ if [ "$1" == "kmb" ]; then
 	cd ../open_source/build
 	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_THB=ON $CMAKE_OPT -DAPI=latest
 	make -j$(nproc) sample_encode sample_decode sample_multi_transcode
-elif [ "$1" == "tbh" ]; then
-	echo "Build MediaSDK for $1"
-	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_THB=ON $CMAKE_OPT -DAPI=latest
-	make -j$(nproc) mfxhw64 mfx_hevce_hw64 mfx_hevcd_hw64 mfx_vp9d_hw64 sample_encode sample_decode sample_multi_transcode
-
-	cd ../open_source/build
-	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_THB=ON $CMAKE_OPT -DAPI=latest
-	make -j$(nproc) sample_encode sample_decode sample_multi_transcode
 elif [ "$1" == "tbh_rt" ]; then
     echo "Build oneVPL runtime for $1"
 	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_VSI=ON $CMAKE_OPT -DAPI=latest -DMFX_EXTRINSIC_VPL=ON -DVPL_ROOT=${VPL_ROOT}
@@ -47,7 +39,7 @@ elif [ "$1" == "tbh_rt" ]; then
 elif [ "$1" == "vsi" ]; then
     echo "Build MediaSDK/oneVPL for $1"
 	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_VSI=ON $CMAKE_OPT -DAPI=latest
-	make -j$(nproc) mfxhw64 sample_encode sample_decode sample_multi_transcode simple_decode_hddl simple_transcode_hddl
+	make -j$(nproc) mfxhw64 sample_encode sample_decode sample_multi_transcode simple_decode_hddl simple_transcode_hddl simple_decode_dynamic_pp
 elif [ "$1" == "vsi_kmb" ]; then
     echo "Build MediaSDK for $1"
     cmake ..
@@ -56,7 +48,6 @@ elif [ "$1" == "vsi_kmb" ]; then
 else
 	echo "Usage: $0 kmb/tbh/vsi/vsi_kmb [no_hddl/no_onevpl]"
 	echo -e "\tkmb for closed source KMB target"
-	echo -e "\ttbh for closed source TBH target"
 	echo -e "\ttbh_rt for TBH oneVPL runtime target only"
 	echo -e "\tvsi for open source TBH target"
 	echo -e "\tvsi_kmb for open source KMB target"

@@ -1,0 +1,2 @@
+cmake .. -DENABLE_OPENCL=OFF -DMFX_ONEVPL=1 -DAPI=2.3
+make

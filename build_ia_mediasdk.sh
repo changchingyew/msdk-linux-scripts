@@ -38,7 +38,7 @@ elif [ "$1" == "tbh_rt" ]; then
 	make -j$(nproc) mfxhw64 sample_encode sample_decode sample_multi_transcode simple_decode_hddl simple_transcode_hddl
 elif [ "$1" == "vsi" ]; then
     echo "Build MediaSDK/oneVPL for $1"
-	cmake .. -DCMAKE_BUILD_TYPE=Debug -DMFX_HW_VSI=ON $CMAKE_OPT -DAPI=latest
+	cmake .. -DMFX_HW_VSI=ON $CMAKE_OPT -DAPI=latest
 	make -j$(nproc) mfxhw64 sample_encode sample_decode sample_multi_transcode simple_decode_hddl simple_transcode_hddl simple_decode_dynamic_pp
 elif [ "$1" == "vsi_kmb" ]; then
     echo "Build MediaSDK for $1"

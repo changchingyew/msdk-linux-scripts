@@ -8,18 +8,18 @@ elif [ "$2" == "no_onevpl" ]; then
 	export HOST_INSTALL_DIR=/opt/intel/
 	export KMB_INSTALL_DIR=${HOST_INSTALL_DIR}/hddlunite
 	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${KMB_INSTALL_DIR}/lib
-	export PATH=$PATH:${KMB_INSTALL_DIR}/bin
+	export PATH=${PATH}:${KMB_INSTALL_DIR}/bin
 
 	export CMAKE_OPT="-DMFX_VSI_HDDL=ON -DMFX_ONEVPL=OFF"
 elif [ "$1" == "vsi_kmb" ]; then
         export HDDL_ROOT=/opt/intel/hddlunite
         export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${HDDL_ROOT}/lib
-        export PATH=$PATH:${HDDL_ROOT}/bin
+        export PATH=${PATH}:${HDDL_ROOT}/bin
     else
         export HOST_INSTALL_DIR=/opt/intel/
         export KMB_INSTALL_DIR=${HOST_INSTALL_DIR}/hddlunite
         export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${KMB_INSTALL_DIR}/lib
-        export PATH=$PATH:${KMB_INSTALL_DIR}/bin
+        export PATH=${PATH}:${KMB_INSTALL_DIR}/bin
     
         export CMAKE_OPT="-DMFX_VSI_HDDL=ON -DMFX_ONEVPL=ON"
 fi

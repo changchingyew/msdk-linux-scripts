@@ -1,1 +1,1 @@
-sshfs vunny@10.221.79.13:/media /media
+sshfs vunny@10.221.79.13:/media/Videos /media

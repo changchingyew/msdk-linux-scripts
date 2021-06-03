@@ -1,0 +1,2 @@
+cmake -D__TRACE:STRING=all -DBUILD_DISPATCHER=OFF -DBUILD_SAMPLES=OFF ..
+make -j$(nproc)

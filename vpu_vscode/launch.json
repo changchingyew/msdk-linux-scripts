@@ -1,0 +1,99 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+    
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            // "program": "/home/hspe/msdk/__cmake/intel64.make.debug/__bin/debug/msdk_gmock",
+            // "args": ["--gtest_filter=avce_vsi_cuctl./27"],
+            // "cwd": "/home/hspe/msdk/mdp_msdk-tests",
+
+            // "program": "/opt/intel/onevpl/share/mfx/samples/_bin/sample_decode",
+            // "args": ["h264", "-i420", "-i", "aud_mw_e.264", "-o", "out_264.yuv"],
+            // "cwd": "/home/hspe/msdk/test_content",
+
+            // "program": "/home/hspe/msdk/gen_roimap_bin/gen_roimap_bin",
+            // "args": ["-fmt", "4", "-c", "h264", "-w", "320", "-h", "256", "-n", "1", "-b", "16", "-i",  "vsi_test2.roi"],
+            // "args": ["-fmt", "4", "-c", "h264", "-w", "1920", "-h", "1080", "-n", "2", "-b", "16", "-i", "vsi_v4_skip_16_AVC_1920x1080_2.roi"],
+
+            // "args": ["-fmt", "4", "-c", "hevc", "-w", "1920", "-h", "1080", "-n", "3", "-b", "8", "-i", "vsi_v4_skip_8_HEVC_1920x1080.roi"],
+            // "args": ["-fmt", "4", "-c", "hevc", "-w", "1920", "-h", "1080", "-n", "4", "-b", "16", "-i", "vsi_v4_skip_16_HEVC_1920x1080.roi"],
+            // "args": ["-fmt", "4", "-c", "hevc", "-w", "1920", "-h", "1080", "-n", "4", "-b", "32", "-i", "vsi_v4_skip_32_HEVC_1920x1080.roi"],
+            // "args": ["-fmt", "4", "-c", "hevc", "-w", "1920", "-h", "1080", "-n", "4", "-b", "64", "-i", "vsi_v4_skip_64_HEVC_1920x1080.roi"],
+            // "cwd": "/home/hspe/msdk/gen_roimap_bin",
+
+            "program": "/opt/intel/onevpl/share/mfx/samples/_bin/sample_encode",
+            // "args": ["h264","-hw","-i","Firework_1920x1080_i420_300frames.yuv","-w","1920","-h","1080","-o","qp.h264","-n","5","-roifile","vsi_v4_partition_size_16_AVC_1920x1080.roi","-roiframe","4"],
+            // "args": ["h264","-hw","-i","../Firework_1920x1080_i420_300frames.yuv","-w","1920","-h","1080","-o","qp.h264","-n","4","-roifile","vsi_v4_skip_16_AVC_1920x1080.roi","-roiframe","4","-roiblocksize","16"],
+            // "args": ["h264","-hw","-i","Firework_1920x1080_i420_300frames.yuv","-w","1920","-h","1080","-o","qp.h264","-n","4","-roifile","vsi_v4_skip_16_AVC_1920x1080_2.roi","-roiframe","4"],
+            // "args": ["h264","-hw","-i","Firework_1920x1080_i420_300frames.yuv",  "-w",  "1920",  "-h",  "1080",  "-o",  "avc.h264",  "-vbr",  "-u",  "7",  "-nobref",  "-n",  "30"],
+
+            // "args": ["h265","-hw","-i","../Firework_1920x1080_i420_300frames.yuv","-w","1920","-h","1080","-o","out.h265","-n","4","-roifile","vsi_v4_skip_8_HEVC_1920x1080.roi","-roiframe","3","-roiblocksize","8","-roiformat","4"],
+            // "args": ["h265","-hw","-i","Firework_1920x1080_i420_300frames.yuv","-w","1920","-h","1080","-o","out.h265","-n","4","-roifile","vsi_v4_skip_16_HEVC_1920x1080.roi","-roiframe","4","-roiblocksize","16","-roiformat","4"],
+            "args": ["h265","-hw","-i","../Firework_1920x1080_i420_300frames.yuv","-w","1920","-h","1080","-o","out.h265","-n","4","-roifile","vsi_v4_skip_32_HEVC_1920x1080.roi","-roiframe","4","-roiblocksize","32","-roiformat","4"],
+            // "args": ["h265","-hw","-i","Firework_1920x1080_i420_300frames.yuv","-w","1920","-h","1080","-o","out.h265","-n","4","-roifile","vsi_v4_skip_64_HEVC_1920x1080.roi","-roiframe","4","-roiblocksize","64","-roiformat","4"],
+            // "cwd": "/home/hspe/msdk/gen_roimap_bin/Sample_roi_map/HEVC_skip_encoding_block8",
+            // "cwd": "/home/hspe/msdk/gen_roimap_bin/Sample_roi_map/HEVC_skip_encoding_block16",
+            "cwd": "/home/hspe/msdk/gen_roimap_bin/Sample_roi_map/HEVC_skip_encoding_block32",
+            // "cwd": "/home/hspe/msdk/gen_roimap_bin/Sample_roi_map/HEVC_skip_encoding_block64",
+
+            // "program": "/opt/intel/onevpl/share/mfx/samples/_bin/simple_11_decode_vp_n_outputs",
+            // "args": ["-hw","-g","320x240","640_640.h265","out-pp-h265.yuv"],
+            // "cwd": "/home/hspe/msdk/pp",
+
+            "stopAtEntry": true,
+
+            "environment": [
+                {
+                    "name": "LIBVA_DRIVERS_PATH",
+                    "value": "/home/hspe/msdk/vaapi_bypass/build"
+                },
+                {
+                    "name": "LIBVA_DRIVER_NAME",
+                    "value": "hddl_bypass"
+                },
+                {
+                    "name": "MFX_HOME",
+                    "value": "/opt/intel/onevpl"
+                },
+                {
+                    "name": "MEDIASDK_STREAMS",
+                    "value": "/home/hspe/msdk/streams"
+                },
+                {
+                    "name": "PATH",
+                    "value": "/opt/intel/onevpl/bin:/opt/intel/onevpl/share/mfx/samples/_bin::$PATH"
+                },
+                {
+                    "name": "LD_LIBRARY_PATH",
+                    "value": "/opt/intel/onevpl/lib64:/opt/intel/onevpl/lib64/mfx:/usr/local/lib:/opt/intel/hddlunite/lib:/home/hspe/msdk/xlink:$LD_LIBRARY_PATH"
+                },
+                {
+                    "name": "CONFIG_PATH",
+                    "value": "/home/hspe/msdk/connection_tcp.cfg"
+                },
+                {
+                    "name": "BYPASS_BATCH_MODE",
+                    "value": "1"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "logging": {
+                "engineLogging": true
+            },
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

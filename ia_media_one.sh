@@ -12,3 +12,8 @@ $SAMPLE_PATH/sample_decode h265 -vaapi -hw -i /media/H265_Videos/Demuxed_H265_Vi
 
 #$SAMPLE_PATH/sample_encode h265 -i /media/RAWS/test_04_640x480.yuv -o /tmp/Fireworks_640x480_4000kbps_60fps__High_at_L3.3VME.265 -w 640 -h 480 -f 60 -hw
 #$SAMPLE_PATH/sample_encode h264 -i /media/RAWS/test_04_640x480.yuv -o /tmp/Fireworks_640x480_4000kbps_60fps__High_at_L3.3VME.264 -w 640 -h 480 -CodecProfile 100 -CodecLevel 32 -b 4000 -f 60 -u speed -hw
+
+#dec_postproc
+#MEDIA=Puppies_3840x2160_20mbps_60fps_High_at_L5.2.h264
+#$SAMPLE_PATH/sample_decode h264 -hw -vaapi -i $MEDIA -r -rgb4 -w 3840 -h 2160
+#$SAMPLE_PATH/sample_decode h264 -hw -vaapi -i $MEDIA -r -rgb4 -w 3840 -h 2160 -dec_postproc force

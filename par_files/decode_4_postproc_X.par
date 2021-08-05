@@ -1,0 +1,7 @@
+-i::h264 /media/H264_Videos/Demuxed_H264_Videos/Coastguard_1920x1080_6mbps_60fps_Baseline_at_L4.1.h264 -join -hw -async 1 -o::sink -vpp_comp_dst_x 0 -vpp_comp_dst_y 0 -vpp_comp_dst_w 1920 -vpp_comp_dst_h 1080 -ext_allocator -dec_postproc
+-i::h264 /media/H264_Videos/Demuxed_H264_Videos/Coastguard_1920x1080_6mbps_60fps_Baseline_at_L4.1.h264 -join -hw -async 1 -o::sink -vpp_comp_dst_x 1920 -vpp_comp_dst_y 0 -vpp_comp_dst_w 1920 -vpp_comp_dst_h 1080 -ext_allocator -dec_postproc
+-i::h264 /media/H264_Videos/Demuxed_H264_Videos/Coastguard_1920x1080_6mbps_60fps_Baseline_at_L4.1.h264 -join -hw -async 1 -o::sink -vpp_comp_dst_x 0 -vpp_comp_dst_y 1050 -vpp_comp_dst_w 1920 -vpp_comp_dst_h 1080 -ext_allocator -dec_postproc
+-i::h264 /media/H264_Videos/Demuxed_H264_Videos/Coastguard_1920x1080_6mbps_60fps_Baseline_at_L4.1.h264 -join -hw -async 1 -o::sink -vpp_comp_dst_x 1920 -vpp_comp_dst_y 1050 -vpp_comp_dst_w 1920 -vpp_comp_dst_h 1080 -ext_allocator -dec_postproc
+
+
+-vpp_comp_only 4 -w 3840 -h 2160 -async 1 -threads 2 -join -hw -i::source -ext_allocator -rx11

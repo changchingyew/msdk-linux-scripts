@@ -1,30 +1,7 @@
 #!/bin/bash
-set -x
 
-DISPLAY=:0
-SAMPLE_PATH=/media-usb/oneVPL/_build
-#SAMPLE_PATH=/media-usb/MediaSDK/build/__bin/release
-#SAMPLE_PATH=/usr/lib64/mfx/samples
-#SAMPLE_PATH=/usr/bin
-#export LD_LIBRARY_PATH=$SAMPLE_PATH
-
-#MEDIA_PATH=/media-usb
-MEDIA_PATH=/media-nvme
-#MEDIA=Puppies_3840x2160_20mbps_60fps_High_at_L5.2.h264
-#MEDIA=Puppies_3840x2160_20mbps_30fps_High_at_L5.0.265
-#MEDIA=Foreman_3840x2160_12mbps_60fps.ivf
-MEDIA=Puppies_1920x1080_38mbps_30fps_Main_at_L4.1.265
-
-#MEDIA=Coastguard_7680x4320_3mbps_60fps_Main_at_L6.1.265
-#MEDIA=vp9-7680x4320-video.ivf
-
-#CODEC=h264
-CODEC=h265
-#CODEC=vp9
-
-RESOLUTION="-w 1920 -h 1080"
-#RESOLUTION="-w 3840 -h 2160"
-#RESOLUTION="-w 7680 -h 4320"
+SCRIPT_DIR="$( cd "$(dirname "${BASH_SOURCE[0]:-$0}")" >/dev/null 2>&1 ; pwd -P )"
+. "${SCRIPT_DIR}/ia_media_env.sh" 
 
 OPS=vdsfc
 #OPS=vpp

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_DIR="$( cd "$(dirname "${BASH_SOURCE[0]:-$0}")" >/dev/null 2>&1 ; pwd -P )"
-. "${SCRIPT_DIR}/ffmpeg_env.sh" 
+. "${SCRIPT_DIR}/jenkinsonlake_env.sh" 
 
 #DEBUG="-loglevel debug"
 #DEBUG="-loglevel verbose"

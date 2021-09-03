@@ -9,16 +9,41 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/home/root/oneVPL/_build/sample_decode",
-            "args": ["-vaapi", "-hw", "-i", "/media/H265_Videos/Demuxed_H265_Videos/Coastguard_640x320_1mbps_30fps_Main_at_L2.1.h265", "-o", "/dev/null"],
-            "cwd": "/home/root/oneVPL/_build",
+
+            // "program": "/media-usb/oneVPL/_build/sample_decode",
+            // "args": ["h265", "-vaapi", "-hw", "-i", "/media-nvme/Puppies_1920x1080_38mbps_30fps_Main_at_L4.1.265", "-rgb4", "-w", "1920", "-h", "1080", "-dec_postproc", "force", "-r"],
+            // "cwd": "/media-usb/oneVPL/_build",
+
+            // "program": "/media2/oneVPL/_build/sample_multi_transcode",
+            // "args": ["vp9", "-vaapi", "-hw", "-i", "/media2/vp9-7680x4320-video.ivf", "-rgb4", "-w", "7680", "-h", "4320", "-dec_postproc", "force", "-n", "1", "-o", "/dev/null"],
+            // "args": ["-par", "/home/root/msdk-linux-scripts/par_files/decode_4_postproc_X.par"],
+
+            // "program": "/media-usb/mips/ffmpeg/ffmpeg_g",
+            // "args": ["-hwaccel", "qsv", "-c:v", "hevc_qsv", "-i", "/media-nvme/Puppies_1920x1080_38mbps_30fps_Main_at_L4.1.265", "-loglevel", "verbose", "-vf", "hwdownload,format=nv12", "-pix_fmt", "yuv420p", "-f", "sdl", "-"],
+            // "cwd": "/media-usb/mips/ffmpeg/",
+
+            "program": "/media-usb/mips/MIPS/build/bin/mips_ut",
+            "args": ["--gtest_filter=TestFFmpegDecode.EndOfStream"],
+            "cwd": "/media-usb/mips/MIPS/",
 
             "stopAtEntry": true,
 
             "environment": [
                 {
-                    "name": "PATH",
-                    "value": "/home/root/oneVPL/_build:$PATH"
+                    "name": "STREAM_PATH",
+                    "value": "/media-usb/mips/MIPS/content/"
+                },
+                {
+                    "name": "STREAM_FILE",
+                    "value": "Puppies_1920x1080_38mbps_30fps_Main_at_L4.1.mkv"
+                },
+                // {
+                //     "name": "PATH",
+                //     "value": "/media-usb/libraries.media.middleware.cartwheel.ffmpeg/ffmpeg:$PATH"
+                // },
+                {
+                    "name": "DISPLAY",
+                    "value": ":0"
                 }
             ],
             "externalConsole": false,

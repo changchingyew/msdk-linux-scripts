@@ -6,6 +6,13 @@ export FFMPEG_PATH=${MIPS_ROOT}/ffmpeg
 #export FFMPEG_PATH=/media-usb/libraries.media.middleware.cartwheel.ffmpeg/ffmpeg
 
 export STREAM_PATH=${MIPS_APP}/content/
+export STREAM_FILE=Puppies_1920x1080_38mbps_30fps_Main_at_L4.1.mkv
+
+#export OUTPUT_PATH=/tmp/
+#export OUTPUT_FILE=out.yuv
+export OUTPUT_PATH=/dev/
+export OUTPUT_FILE=null
+
 export RTSPSERVER_PATH=${MIPS_APP}/tools/rtsp-server/
 
 export MIPS_INSTALL=${MIPS_ROOT}/mips_install

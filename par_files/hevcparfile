@@ -1,0 +1,9 @@
+-i::h264 /home/root/data/18.h264 -o::h265 /dev/null -w 1920 -h 1080 -f 30 -b 1000 
+-i::h264 /home/root/data/18.h264 -o::h265 /dev/null -w 1920 -h 1080 -f 30 -b 1000 -join
+-i::h264 /home/root/data/18.h264 -o::h265 /dev/null -w 1920 -h 1080 -f 30 -b 1000 -join
+-i::h264 /home/root/data/18.h264 -o::h265 /dev/null -w 1920 -h 1080 -f 30 -b 1000 -join
+-i::h264 /home/root/data/18.h264 -o::h265 /dev/null -w 1920 -h 1080 -f 30 -b 1000 -join
+-i::h264 /home/root/data/18.h264 -o::h265 /dev/null -w 1920 -h 1080 -f 30 -b 1000 -join
+-i::h264 /home/root/data/18.h264 -o::h265 /dev/null -w 1920 -h 1080 -f 30 -b 1000 -join
+-i::h264 /home/root/data/18.h264 -o::h265 /dev/null -w 1920 -h 1080 -f 30 -b 1000 -join
+

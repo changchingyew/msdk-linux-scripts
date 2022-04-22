@@ -1,0 +1,8 @@
+#!/bin/bash
+set -x
+unset MFX_HOME
+#cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUILD_DISPATCHER=OFF -DBUILD_SAMPLES=OFF -DENABLE_TEXTLOG=ON -DENABLE_STAT=ON ..  
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DENABLE_WAYLAND=ON -DCMAKE_INSTALL_LIBDIR=/usr/lib/x86_64-linux-gnu/
+#cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUILD_DISPATCHER=OFF -DBUILD_SAMPLES=OFF .. 
+make -j$(nproc) 
+sudo make install

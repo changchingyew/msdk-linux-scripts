@@ -22,21 +22,20 @@
             // "args": ["-hwaccel", "qsv", "-c:v", "hevc_qsv", "-i", "/media-nvme/Puppies_1920x1080_38mbps_30fps_Main_at_L4.1.265", "-loglevel", "verbose", "-vf", "hwdownload,format=nv12", "-pix_fmt", "yuv420p", "-f", "sdl", "-"],
             // "cwd": "/media-usb/mips/ffmpeg/",
 
-            "program": "/mnt/hdd2/cyew3/ledsw/applications.media.gui.mips/build/bin/mips_ut",
-            "args": ["--gtest_filter=TestSplitterFilter.OneOutput"],
-            // "args": ["--gtest_filter=TestFFmpegDecode.EndOfStream"],
-            "cwd": "/mnt/hdd2/cyew3/ledsw/applications.media.gui.mips/build/bin",
+            "program": "${workspaceFolder}/build/bin/mips_ut",
+            "args": ["--gtest_filter=TestST2110Sink.SetupExecutePlay", "--tx"],
+            "cwd": "${workspaceFolder}/build/bin",
 
             "stopAtEntry": false,
 
             "environment": [
                 {
                     "name": "STREAM_PATH",
-                    "value": "/home/cyew3/hdd2/ledsw/applications.media.gui.mips/content/"
+                    "value": "${workspaceFolder}/content/"
                 },
                 {
                     "name": "LD_LIBRARY_PATH",
-                    "value": "/home/cyew3/hdd2/ledsw/local_install/lib:/usr/local/lib/x86_64-linux-gnu/:/home/cyew3/intel/openvino_2021/data_processing/dl_streamer/lib:/home/cyew3/intel/openvino_2021/data_processing/gstreamer/lib:/home/cyew3/intel/openvino_2021/opencv/lib:/home/cyew3/intel/openvino_2021/deployment_tools/ngraph/lib:/home/cyew3/intel/openvino_2021/deployment_tools/inference_engine/external/tbb/lib::/home/cyew3/intel/openvino_2021/deployment_tools/inference_engine/external/hddl/lib:/home/cyew3/intel/openvino_2021/deployment_tools/inference_engine/external/omp/lib:/home/cyew3/intel/openvino_2021/deployment_tools/inference_engine/external/gna/lib:/home/cyew3/intel/openvino_2021/deployment_tools/inference_engine/external/mkltiny_lnx/lib:/home/cyew3/intel/openvino_2021/deployment_tools/inference_engine/lib/intel64:/home/cyew3/intel/oneapi/vpl/2022.0.0/lib:/home/cyew3/intel/oneapi/tbb/2021.5.1/env/../lib/intel64/gcc4.8:/home/cyew3/intel/oneapi/mpi/2021.5.1//libfabric/lib:/home/cyew3/intel/oneapi/mpi/2021.5.1//lib/release:/home/cyew3/intel/oneapi/mpi/2021.5.1//lib:/home/cyew3/intel/oneapi/mkl/2022.0.2/lib/intel64:/home/cyew3/intel/oneapi/ipp/2021.5.2/lib/intel64:/home/cyew3/intel/oneapi/ippcp/2021.5.1/lib/intel64:/home/cyew3/intel/oneapi/ipp/2021.5.2/lib/intel64:/home/cyew3/intel/oneapi/dnnl/2022.0.2/cpu_dpcpp_gpu_dpcpp/lib:/home/cyew3/intel/oneapi/debugger/2021.5.0/gdb/intel64/lib:/home/cyew3/intel/oneapi/debugger/2021.5.0/libipt/intel64/lib:/home/cyew3/intel/oneapi/debugger/2021.5.0/dep/lib:/home/cyew3/intel/oneapi/dal/2021.5.3/lib/intel64:/home/cyew3/intel/oneapi/compiler/2021.4.0/linux/lib:/home/cyew3/intel/oneapi/compiler/2021.4.0/linux/lib/x64:/home/cyew3/intel/oneapi/compiler/2021.4.0/linux/lib/emu:/home/cyew3/intel/oneapi/compiler/2021.4.0/linux/lib/oclfpga/host/linux64/lib:/home/cyew3/intel/oneapi/compiler/2021.4.0/linux/lib/oclfpga/linux64/lib:/home/cyew3/intel/oneapi/compiler/2021.4.0/linux/compiler/lib/intel64_lin:/home/cyew3/intel/oneapi/ccl/2021.5.1/lib/cpu_gpu_dpcpp"
+                    "value": "/usr/local/lib:/opt/intel/mediasdk/lib"
                 },
                 {
                     "name": "LIBVA_DRIVER_NAME",
@@ -48,7 +47,7 @@
                 },
                 {
                     "name": "LIBSPLITTERKERNEL_PATH",
-                    "value": "/home/cyew3/hdd2/ledsw/applications.media.gui.mips/mfdl/src/Node/SplitterFilter/kernel/build/"
+                    "value": "${workspaceFolder}/mfdl/src/Node/SplitterFilter/kernel/build/"
                 },
 
                 // {
